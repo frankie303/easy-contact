@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 // @route   POST api/contacts
-// @desc    Update contact
+// @desc    Add new contact
 // @access  Private
 router.put('/id', (req, res) => {
   res.send('Add contact');
@@ -19,7 +19,7 @@ router.put('/id', (req, res) => {
 module.exports = router;
 
 
-// @route   PUT api/contacts(:id)
+// @route   PUT api/contacts/:id
 // @desc    Update contact
 // @access  Private
 router.put('/:id', (req, res) => {
@@ -28,8 +28,8 @@ router.put('/:id', (req, res) => {
 
 module.exports = router;
 
-// @route   DELETE api/contacts(:id)
-// @desc    Update contact
+// @route   DELETE api/contacts/:id
+// @desc    Delete contact
 // @access  Private
 router.delete('/:id', (req, res) => {
   res.send('Delete contact');
