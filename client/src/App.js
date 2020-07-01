@@ -12,6 +12,7 @@ import Alerts from './components/layout/Alerts';
 import AlertState from './context/alert/AlertState';
 import setAuthToken from './utils/setAuthToken';
 import PrivateRoute from './components/routing/PrivateRoute';
+import Footer from './components/layout/Footer';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -33,6 +34,7 @@ const App = () => {
                   <Route exact path='/login' component={Login} />
                 </Switch>
               </div>
+              <Footer />
             </>
           </Router>
         </AlertState>

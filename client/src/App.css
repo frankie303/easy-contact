@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* Global Styles */
 :root {
-  --primary-color: #003699;
+  --primary-color: #a4c222;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -16,11 +16,11 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: rgb(39, 37, 37);
+  color: rgb(230, 223, 223);
 }
 
 a {
@@ -93,7 +93,7 @@ img {
 /* Cards */
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: rgb(33, 126, 75) 1px dotted;
   margin: 0.7rem 0;
 }
 
@@ -301,7 +301,7 @@ input {
 .form-text {
   display: block;
   margin-top: 0.3rem;
-  color: #888;
+  color: rgb(240, 230, 230);
 }
 
 input[type='text'],
