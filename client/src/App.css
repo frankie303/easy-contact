@@ -2,8 +2,8 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #a4c222;
-  --dark-color: #333333;
+  --primary-color: #a53f86;
+  --dark-color: #000000;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -19,7 +19,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: rgb(39, 37, 37);
+  background-color: rgb(0, 0, 0);
   color: rgb(230, 223, 223);
 }
 
