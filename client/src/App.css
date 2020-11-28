@@ -1,11 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face {
+  font-family: 'Avenir';
+  src: url('https://yabal.s3-us-west-2.amazonaws.com/Avenir.otf')
+    format('opentype');
+}
+@font-face {
+  font-family: 'FatFrank-Regular';
+  src: url('https://yabal.s3-us-west-2.amazonaws.com/FatFrank-Regular.otf')
+    format('opentype');
+}
 
 /* Global Styles */
 :root {
-  --primary-color: #a53f86;
+  --primary-color: #30a9de;
+
   --dark-color: #000000;
-  --light-color: #f4f4f4;
-  --danger-color: #dc3545;
+  --light-color: #548687;
+  --danger-color: #e53a40;
   --success-color: #28a745;
 }
 
@@ -15,12 +25,38 @@
   padding: 0;
 }
 
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+i.fas.fa-spinner {
+  font-size: 50px;
+}
+
+html {
+  min-height: 100%;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Avenir', sans-serif;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+
   font-size: 1rem;
   line-height: 1.6;
-  background-color: rgb(0, 0, 0);
-  color: rgb(230, 223, 223);
+  background: linear-gradient(
+    to top,
+    #182848,
+    #4b6cb7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
 }
 
 a {
@@ -28,6 +64,10 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: 'FatFrank-Regular', sans-serif, Helvetica;
+  letter-spacing: 2px;
+}
 a:hover {
   color: #666;
 }
@@ -38,6 +78,15 @@ ul {
 
 img {
   width: 100%;
+}
+
+.footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.wrapper {
+  min-height: 100%;
 }
 
 /* Utilities */
@@ -183,6 +232,29 @@ img {
   grid-gap: 2rem;
 }
 
+.myButton {
+  background: transparent;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 8px;
+  margin: 2px;
+  border: solid #ffffff 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  border: solid white 1.5px;
+}
+
+.myButton:hover {
+  border: solid white 2px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
 .btn {
   display: inline-block;
   background: var(--light-color);
@@ -194,6 +266,14 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  border-radius: 5px;
+}
+
+.address-logo {
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 7px;
 }
 
 .btn-link {
@@ -235,7 +315,18 @@ img {
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: var(--primary-color);
+  background: #d53369; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #cbad6d,
+    #d53369
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #cbad6d,
+    #d53369
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: #fff;
 }
 
@@ -331,7 +422,7 @@ button {
 }
 
 .form-container {
-  max-width: 500px;
+  max-width: 400px;
   margin: 2rem auto;
   overflow: hidden;
   padding: 0 2rem;
@@ -371,13 +462,13 @@ table th {
 }
 
 .navbar a {
-  color: #fff;
+  color: rgb(223, 223, 223);
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
 
 .navbar a:hover {
-  color: var(--light-color);
+  color: white;
 }
 
 .navbar .welcome span {
