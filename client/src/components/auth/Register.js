@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
 
-const Register = (props) => {
+const Register = props => {
   const alertContext = useContext(AlertContext);
   const authContext = useContext(AuthContext);
 
@@ -28,13 +28,13 @@ const Register = (props) => {
     password2: ''
   });
 
-  const onChange = (e) =>
+  const onChange = e =>
     setUser({
       ...user,
       [e.target.name]: e.target.value
     });
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     if (name === '' || email === '' || password === '') {
       setAlert('Please enter all fields', 'danger');
@@ -53,9 +53,7 @@ const Register = (props) => {
 
   return (
     <div className='form-container'>
-      <h1>
-        Account <span className='text-primary'>Register</span>
-      </h1>
+      <h1>SIGN UP</h1>
       <form onSubmit={onSubmit}>
         <div className='form-group'>
           <label htmlFor='name'>Name</label>

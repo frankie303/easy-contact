@@ -30,20 +30,25 @@ const Navbar = ({ title, icon }) => {
 
   const guestLinks = (
     <>
-      <li>
-        <Link to='/register'>Register</Link>
+      <li className='myButton'>
+        <Link to='/register'>Sign up</Link>
       </li>
-      <li>
-        <Link to='/login'>Login</Link>
+      <li className='myButton'>
+        <Link to='/login'>Log in</Link>
       </li>
     </>
   );
 
   return (
     <div className='navbar bg-primary'>
-      <h1>
-        <i className={icon} /> {title}
-      </h1>
+      <Link to='/'>
+        {' '}
+        <h1>
+          <img src='/images/address-book.png' className='address-logo'></img>{' '}
+          {title}
+        </h1>
+      </Link>
+
       <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
     </div>
   );
