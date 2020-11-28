@@ -11,7 +11,11 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #30a9de;
+  --primary-color: linear-gradient(
+    to top,
+    #182848,
+    #4b6cb7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   --dark-color: #000000;
   --light-color: #548687;
@@ -47,11 +51,20 @@ body {
 
   font-size: 1rem;
   line-height: 1.6;
+  background: #56ccf2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #2f80ed,
+    #56ccf2
+  ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to top,
-    #182848,
-    #4b6cb7
+    #2f80ed,
+    #56ccf2
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /* background: #30a9de; */
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -72,6 +85,14 @@ a:hover {
   color: #666;
 }
 
+a.portfolio-link {
+  color: #d4eaff;
+}
+a.portfolio-link:hover {
+  color: white;
+  font-weight: 900;
+}
+
 ul {
   list-style: none;
 }
@@ -87,6 +108,8 @@ img {
 
 .wrapper {
   min-height: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
 /* Utilities */
@@ -141,9 +164,13 @@ img {
 
 /* Cards */
 .card {
+  background: #f8a5c2;
+
   padding: 1rem;
   border: rgb(33, 126, 75) 1px dotted;
   margin: 0.7rem 0;
+  font-weight: bold;
+  color: #303952;
 }
 
 /* List */
@@ -316,16 +343,6 @@ img {
 .badge-primary,
 .alert-primary {
   background: #d53369; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #cbad6d,
-    #d53369
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #cbad6d,
-    #d53369
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   color: #fff;
 }

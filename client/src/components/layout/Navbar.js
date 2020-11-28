@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
 import ContactContext from '../../context/contact/contactContext';
 
-const Navbar = ({ title, icon }) => {
+const Navbar = ({ title }) => {
   const authContext = useContext(AuthContext);
   const contactContext = useContext(ContactContext);
 
@@ -55,13 +55,11 @@ const Navbar = ({ title, icon }) => {
 };
 
 Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.string
+  title: PropTypes.string.isRequired
 };
 
 Navbar.defaultProps = {
-  title: 'EasyContact',
-  icon: 'fas fa-users'
+  title: 'EasyContact'
 };
 
 export default Navbar;
