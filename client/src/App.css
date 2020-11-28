@@ -294,6 +294,7 @@ img {
   transition: opacity 0.2s ease-in;
   outline: none;
   border-radius: 5px;
+  -webkit-appearance: none;
 }
 
 .address-logo {
@@ -312,6 +313,7 @@ img {
 .btn-block {
   display: block;
   width: 100%;
+  -webkit-appearance: none;
 }
 
 .btn-sm {
@@ -342,9 +344,9 @@ img {
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: #d53369; /* fallback for old browsers */
-
+  background: #d53369;
   color: #fff;
+  -webkit-appearance: none;
 }
 
 .btn-light,
