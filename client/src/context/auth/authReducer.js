@@ -9,7 +9,7 @@ import {
   CLEAR_ERRORS
 } from '../types';
 
-export const alertReducer = (state, action) => {
+export const authReducer = (state, action) => {
   switch (action.type) {
     case USER_LOADED:
       return {
