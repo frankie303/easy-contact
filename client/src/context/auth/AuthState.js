@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import axios from 'axios';
 import AuthContext from './authContext';
-import authReducer from './authReducer';
+import { authReducer } from './authReducer';
 import setAuthToken from '../../utils/setAuthToken';
 import {
   REGISTER_SUCCESS,
@@ -14,7 +14,7 @@ import {
   CLEAR_ERRORS
 } from '../types';
 
-const AuthState = (props) => {
+const AuthState = props => {
   const initialState = {
     token: localStorage.getItem('token'),
     isAuthenticated: null,
@@ -44,7 +44,7 @@ const AuthState = (props) => {
   };
 
   // Register User
-  const register = async (formData) => {
+  const register = async formData => {
     const config = {
       headers: {
         'Content-Type': 'application/json'
@@ -67,7 +67,7 @@ const AuthState = (props) => {
     }
   };
   // Login User
-  const login = async (formData) => {
+  const login = async formData => {
     const config = {
       headers: {
         'Content-Type': 'application/json'
