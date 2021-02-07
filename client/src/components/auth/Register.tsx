@@ -1,11 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react';
 import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
+import { History, LocationState } from 'history';
 
-const Register = props => {
+interface RegisterProps {
+  history: History<LocationState>;
+}
+
+const Register = (props: RegisterProps) => {
   const alertContext = useContext(AlertContext);
   const authContext = useContext(AuthContext);
-
   const { setAlert } = alertContext;
   const { register, error, clearErrors, isAuthenticated } = authContext;
 
@@ -28,13 +32,13 @@ const Register = props => {
     password2: ''
   });
 
-  const onChange = e =>
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setUser({
       ...user,
       [e.target.name]: e.target.value
     });
 
-  const onSubmit = e => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (name === '' || email === '' || password === '') {
       setAlert('Please enter all fields', 'danger');
@@ -83,7 +87,7 @@ const Register = props => {
             value={password}
             onChange={onChange}
             required
-            minLength='6'
+            minLength={6}
           />
         </div>
         <div className='form-group'>
@@ -94,7 +98,7 @@ const Register = props => {
             value={password2}
             onChange={onChange}
             required
-            minLength='6'
+            minLength={6}
           />
         </div>
         <input
