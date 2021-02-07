@@ -3,7 +3,7 @@ import ContactContext from '../../context/contact/contactContext';
 
 const ContactFilter = () => {
   const contactContext = useContext(ContactContext);
-  const text = useRef('');
+  const text = useRef<HTMLInputElement>(null!);
 
   const { filterContacts, clearFilter, filtered } = contactContext;
 
@@ -13,7 +13,7 @@ const ContactFilter = () => {
     }
   });
 
-  const onChange = (e) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (text.current.value !== '') {
       filterContacts(e.target.value);
     } else {
