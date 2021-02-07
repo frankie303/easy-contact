@@ -28,10 +28,10 @@ const ContactForm = () => {
 
   const { name, email, phone, type } = contact;
 
-  const onChange = (e) =>
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setContact({ ...contact, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (current === null) {
       addContact(contact);
