@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import AuthContext from '../../context/auth/authContext';
-import ContactContext from '../../context/contact/contactContext';
+import { AuthContext } from '../../context/AuthState';
+import { ContactContext } from '../../context/ContactState';
 
 const Navbar = ({ title }) => {
   const authContext = useContext(AuthContext);

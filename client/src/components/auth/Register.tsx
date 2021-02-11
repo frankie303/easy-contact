@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
-import AlertContext from '../../context/alert/alertContext';
-import AuthContext from '../../context/auth/authContext';
+import { AlertContext } from '../../context/AlertState';
+import { AuthContext } from '../../context/AuthState';
 import { History, LocationState } from 'history';
 
 interface RegisterProps {
