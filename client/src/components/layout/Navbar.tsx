@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthState';
 import { ContactContext } from '../../context/ContactState';
 
-const Navbar = ({ title }) => {
+const Navbar = () => {
   const authContext = useContext(AuthContext);
   const contactContext = useContext(ContactContext);
 
@@ -45,21 +44,13 @@ const Navbar = ({ title }) => {
         {' '}
         <h1>
           <img src='/images/address-book.png' className='address-logo'></img>{' '}
-          {title}
+          EasyContact{' '}
         </h1>
       </Link>
 
       <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
     </div>
   );
-};
-
-Navbar.propTypes = {
-  title: PropTypes.string.isRequired
-};
-
-Navbar.defaultProps = {
-  title: 'EasyContact'
 };
 
 export default Navbar;
