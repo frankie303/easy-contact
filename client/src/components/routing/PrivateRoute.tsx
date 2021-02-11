@@ -5,6 +5,7 @@ import AuthContext from '../../context/auth/authContext';
 type PrivateRouteProps = {
   path: RouteProps['path'];
   component: React.ElementType;
+  exact: boolean;
 };
 
 const PrivateRoute: React.FunctionComponent<PrivateRouteProps> = ({
