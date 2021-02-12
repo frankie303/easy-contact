@@ -1,12 +1,18 @@
 import React, { useReducer, createContext } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-interface Alert {
+// interface Alert {
+//   msg: string;
+//   type: string;
+// }
+
+// interface AlertState extends Alert {
+//   id: string;
+// }
+
+interface AlertState {
   msg: string;
   type: string;
-}
-
-interface AlertState extends Alert {
   id: string;
 }
 
@@ -16,13 +22,13 @@ interface AlertContextProps {
   // dispatch: React.Dispatch<Action>;
 }
 
-type Action =
+type AlertAction =
   | { type: 'SET_ALERT'; payload: AlertState }
   | { type: 'REMOVE_ALERT'; payload: string };
 
 export const AlertContext = createContext({} as AlertContextProps);
 
-export const alertReducer = (state: AlertState[], action: Action) => {
+export const alertReducer = (state: AlertState[], action: AlertAction) => {
   switch (action.type) {
     case 'SET_ALERT':
       return [...state, action.payload];
