@@ -24,7 +24,7 @@
     "config": "^3.3.3",
     "express": "^4.17.1",
     "express-validator": "^6.9.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.11.15"
   },
   "devDependencies": {
